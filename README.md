@@ -26,6 +26,6 @@ docker-compose up --build
 
 ### 3. Accéder à l'Application
 
-Le frontend sera accessible sur http://localhost:3000.
-Le backend sera accessible sur http://localhost:8000.
+- Le frontend sera accessible sur http://localhost:3000.
+- Le backend sera accessible sur http://localhost:8000.
 
