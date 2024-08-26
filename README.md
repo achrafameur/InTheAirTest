@@ -1,7 +1,4 @@
-# InTheAir
-
-## Introduction
-InTheAir est une application web composée d'un frontend (React) et d'un backend (Django) avec une base de données MySQL. Ce projet est conçu pour [expliquez l'objectif de votre application ici].
+# InTheAirTest
 
 ## Structure du Projet
 - **Backend** : Le dossier `intheairbackend` contient le code Django.
