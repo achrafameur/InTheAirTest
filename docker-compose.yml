@@ -1,0 +1,37 @@
+services:
+  backend:
+    build: ./intheairbackend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./intheairbackend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    build: ./intheairfrontend
+    command: npm start
+    volumes:
+      - ./intheairfrontend:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - backend
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: "intheair"
+      # MYSQL_USER: "root"
+      # MYSQL_PASSWORD: ""
+      MYSQL_ROOT_PASSWORD: "Admin1925"
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
